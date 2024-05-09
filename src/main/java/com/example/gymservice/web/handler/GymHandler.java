@@ -40,13 +40,14 @@ public class GymHandler {
         return serverRequest.bodyToMono(GymDTO.class)
                 .doOnSuccess(this::validate)
                 .flatMap(gymService::update)
+                .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND)))
                 .flatMap(gymDTO -> ServerResponse.noContent().build());
     }
 
     public Mono<ServerResponse> getGymById(ServerRequest serverRequest) {
-        return gymService.findById(Long.valueOf(serverRequest.pathVariable(GYM_ID)))
-                .flatMap(gymDTO -> ServerResponse.ok().bodyValue(gymDTO))
-                .switchIfEmpty(ServerResponse.notFound().build());
+        return ServerResponse.ok()
+                .body(gymService.findById(Long.valueOf(serverRequest.pathVariable(GYM_ID)))
+                .switchIfEmpty(Mono.error(new ResponseStatusException(HttpStatus.NOT_FOUND))), GymDTO.class);
     }
 
     public Mono<ServerResponse> getAllGyms(ServerRequest serverRequest) {
