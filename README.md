@@ -7,6 +7,10 @@ The GymService Microservice is designed to manage gym data within an application
 RESTful API endpoints for creating, updating, retrieving, and deleting gym data. Built using Java technologies
 and Spring WebFlux, this microservice employs reactive programming principles for efficient handling of concurrent requests.
 
+## Limitations and Use Case
+This microservice was developed as a practice project to explore reactive programming with Spring WebFlux.  
+It is not intended for production use but serves as a learning tool to demonstrate modern Java development practices and principles.
+
 ## Technologies Used:
 - __Spring Framework:__ Core framework for building enterprise Java applications.
 - __Project Lombok:__ Library for reducing boilerplate code in Java.
