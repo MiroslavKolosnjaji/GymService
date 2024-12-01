@@ -1,3 +1,7 @@
+![Java](https://img.shields.io/badge/Java-17-brightgreen)
+![Spring WebFlux](https://img.shields.io/badge/Spring%20WebFlux-Reactive-blue)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+![GitHub forks](https://img.shields.io/github/forks/MiroslavKolosnjaji/GymService)
 # GymService
 The GymService Microservice is designed to manage gym data within an application ecosystem. It provides
 RESTful API endpoints for creating, updating, retrieving, and deleting gym data. Built using Java technologies
@@ -18,3 +22,6 @@ and Spring WebFlux, this microservice employs reactive programming principles fo
 ### Conclusion
 The GymService microservice embodies modern Java development practices, leveraging reactiver programming, clean architecture,
 and robust testing methodologies to deliver efficient and scalable gym data management functionality.
+
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
